@@ -1,0 +1,45 @@
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alura Geek - Login</title>
+    <link rel="stylesheet" href="../src/assets/css/reset.css">
+    <link rel="stylesheet" href="../src/assets/css/pesquisa.css">
+</head>
+<body>
+    <header>
+        <nav class="nav">
+            <div class="nav__container">
+                <a href="../index.html" class="nav__container__logo">
+                    <img class="nav__container__logo__img" src="../src/assets/img/logo-img.png" alt="">
+                    <p class="nav__container__logo__text"><span class="nav__container__logo__text__blue">Alura</span>Geek</p>
+                </a>
+                <section class="nav__container__search-box" id="search-box">
+                    <input class="nav__container__search-box__input" id="input-search-bar" type="text" placeholder="O que deseja encontrar?">
+                    <button id="button-search" class="nav__container__search-box__button"><img class="nav__container__search-box__img" id="img-search" src="../src/assets/img/search-icon.png" alt="pesquisar"></button>
+                </section>
+                <button class="nav__container__login-button" id="login-button">
+                    <p id="login-button">Login</p>
+                </button>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <ul id="search-list"></ul>
+        <h1 class="not-find-message" id="not-find">Nenhum resultado encontrado! =/</h1>
+    </main>
+    <main>
+        
+
+    </main>
+    <footer class="footer">
+        <h4 class="footer__text">Desenvolvido por Cassiano Almeida<br>2021</h4>
+    </footer>
+
+    <script type="module" src="../js/view/searchBarView.js"></script>
+    <script type="module" src="../js/controller/pegaIdProdutoSearchPage.js"></script>
+    <script type="module" src="../js/controller/searchBarProdutos.js"></script>
+
+</body>
+</html>

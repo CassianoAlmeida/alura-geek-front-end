@@ -1,0 +1,79 @@
+html {
+    scroll-behavior: smooth;
+}
+
+.presentation {
+    width: 100%;
+    position: relative;
+
+    &__img {
+        height: 352px;
+        width: 100%;
+        background: url('../img/hero-banner.png') center;
+        object-fit: cover;
+    }
+
+    &__content {
+        max-width: 1136px;
+        position: absolute;
+        padding: 0 auto;
+        top: 45%;
+        left: 8%;
+
+        &__title {
+            height: 61px;
+            font-family: 'Raleway';
+            font-style: normal;
+            font-weight: 700;
+            font-size: 52px;
+            line-height: 61px;
+            margin-bottom: 16px;
+            color: $white;
+
+            @include for-phone-only {
+                font-size: 32px;
+            }
+        }
+
+        &__text {
+            height: 26px;
+            font-family: 'Raleway';
+            font-style: normal;
+            font-weight: 700;
+            font-size: 22px;
+            line-height: 26px;
+            margin-bottom: 16px;
+            color: $white;
+
+            @include for-phone-only {
+                font-size: 18px;
+            }
+        }
+
+        &__button {
+            width: 130px;
+            height: 51px;
+            line-height: 19px;
+            border: none;
+            left: 0px;
+            top: 119px;
+            background-color: $blue-theme;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            &__anchor {
+                text-decoration: none;
+                font-family: 'Raleway';
+                font-style: normal;
+                color: $white;
+                font-weight: 400;
+                font-size: 16px;
+
+                @include for-phone-only {
+                    font-size: 14px;
+                }
+            }
+        }
+    }    
+}

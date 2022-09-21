@@ -1,0 +1,28 @@
+$blue-theme: #2A7AE4;
+$custom-black: #464646;
+$light-gray: #F5F5F5;
+$white: #FFFFFF;
+$light-blue-background: #EAF2FD;
+$gray-background: #E5E5E5;
+$placeholder-color: #A2A2A2;
+$light-gray-background: #E5E5E5;
+
+
+@mixin for-phone-only {
+    @media (max-width: 667.98px) { @content; }
+}
+
+@mixin for-tablet-only {
+    @media (min-width: 668px) and (max-width: 1099.98px) { @content; }
+}
+
+@mixin for-desktop-only {
+    @media (min-width: 1100px) { @content; }
+}
+
+@import './components/header.scss',
+'./components/produtos.scss',
+'./components/contact.scss',
+'./components/footer.scss',
+'./components/novo-produto-modal.scss',
+'./components/modal-update.scss'

@@ -1,0 +1,106 @@
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Produto - Alura Geek</title>
+    <link rel="stylesheet" href="../src/assets/css/reset.css">
+    <link rel="stylesheet" href="../src/assets/css/produto.css">
+</head>
+<body>
+    <header>
+        <nav class="nav">
+            <div class="nav__container">
+                <a href="../index.html" class="nav__container__logo">
+                    <img class="nav__container__logo__img" src="../src/assets/img/logo-img.png" alt="">
+                    <p class="nav__container__logo__text"><span class="nav__container__logo__text__blue">Alura</span>Geek</p>
+                </a>
+                <section class="nav__container__search-box" id="search-box">
+                    <input class="nav__container__search-box__input" id="input-search-bar" type="text" placeholder="O que deseja encontrar?">
+                    <button id="button-search" class="nav__container__search-box__button"><img class="nav__container__search-box__img" id="img-search" src="../src/assets/img/search-icon.png" alt="pesquisar"></button>
+                </section>
+                <button class="nav__container__login-button" id="login-button">
+                    <p id="login-button">Login</p>
+                </button>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <section class="produto">
+            <div class="produto__container">
+                <img class="produto__img" alt="produto XYZ" id="product-image">
+            </div>
+            <div class="produto__content">
+                <h1 class="produto__content__title" id="product-title"></h1>
+                <p class="produto__content__price" id="product-price"></p>
+                <p class="produto__content__text" id="product-description"></p>
+            </div>
+        </section>
+
+        <section class="products">
+            <div class="products__header">
+                <h2 class="products__header__title">Produtos similares</h2>
+            </div>
+            <ul class="products__list" id="similar-products">
+            </ul>
+        </section>
+        <section class="contact">
+            <div class="contact__container">
+                <div class="contact__info">
+                    <section class="contact__info__logo">
+                        <img src="../src/assets/img/logo-img.png" alt="">
+                        <p class="contact__info__logo__text"><span class="contact__info__logo__text__blue">Alura</span>Geek</p>
+                    </section>
+                    <section class="contact__info__topics">
+                        <a href="#" class="contact__info__topics__link">Quem somos nós</a>
+                        <a href="#" class="contact__info__topics__link">Política de privacidade</a>
+                        <a href="#" class="contact__info__topics__link">Programa de fidelidade</a>
+                        <a href="#" class="contact__info__topics__link">Nossas lojas</a>
+                        <a href="#" class="contact__info__topics__link">Quero ser franqueado</a>
+                        <a href="#" class="contact__info__topics__link">Anuncie aqui</a>
+                    </section>
+                </div>
+                <div class="contact__fale-conosco">
+                    <p class="contact__fale-conosco__title">Fale conosco</p>
+                    <form class="contact__fale-conosco__form" action="">
+                        <label class="contact__fale-conosco__form__name-label" for="name">Nome</label>
+                        <input class="contact__fale-conosco__form__name" type="text" id="name">
+                        <label class="contact__fale-conosco__form__message-label"for="message">Escreva sua mensagem</label>
+                        <textarea class="contact__fale-conosco__form__message" name="" id="message" cols="30" rows="5"></textarea>
+                        <input class="contact__fale-conosco__form__button" type="submit" value="Enviar mensagem">
+                    </form>
+                </div>
+            </div>
+        </section>
+
+    </main>
+    <footer class="footer">
+        <h4 class="footer__text">Desenvolvido por Cassiano Almeida<br>2021</h4>
+    </footer>
+
+    <!-- Modal -->
+    <div id="modal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <section class="login">
+                <h1 class="login__title">Iniciar Sessão</h1>
+                <form class="login__form" action="">
+                    <label for="email"></label>
+                    <input class="login__form__field" type="text" id="email" placeholder="Escreva seu email">
+                    <label for="senha"></label>
+                    <input class="login__form__field" type="text" id="senha" placeholder="Escreva sua senha">
+                    <button class="login__form__button" type="reset" id="entrar">Entrar</button>
+                </form>
+            </section>
+        </div>
+    </div>
+
+    <script type="module" src="../js/view/produtoView.js"></script>
+    <script type="module" src="../js/view/produtosSimilaresView.js"></script>
+    <script type="module" src="../js/controller/searchBarProdutos.js"></script>
+    <script type="module" src="../js/controller/pegaIdProdutoSearchPage.js"></script>
+    <script src="../js/controller/fakelogin.js"></script>
+    <script src="../js/view/modal-login.js"></script>
+
+</body>
+</html>

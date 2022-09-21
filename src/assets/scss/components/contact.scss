@@ -1,0 +1,161 @@
+.contact {
+    background-color: $light-blue-background;
+    padding: 70px 0;
+    margin-top: 50px;
+
+    &__container {
+        max-width: 1136px;
+        display: flex;
+        margin: 0 auto;
+
+        @include for-phone-only {
+            flex-direction: column;
+        }
+    }
+
+    &__info {
+        display: flex;
+        width: 50%;
+
+        @include for-tablet-only {
+            flex-direction: column;
+        }
+
+        @include for-phone-only {
+            flex-direction: column;
+            width: 100%;
+        }
+
+        &__logo {
+            display: flex;
+            position: relative;
+            align-self: flex-start;
+            margin: 0 auto;
+
+            @include for-phone-only {
+                margin-bottom: 6%;
+            }
+
+            @include for-tablet-only {
+                margin-bottom: 6%;
+            }
+            
+            &__text {
+               font-size: 26px;
+               font-weight: bold;
+
+               &__blue {
+                   color: $blue-theme;
+               }
+            }
+        }
+
+        &__topics {
+            display: flex;
+            flex-direction: column;
+            margin: 0 auto;
+
+            &__link {
+                text-decoration: none;
+                color: $custom-black;
+                font-family: 'Raleway';
+                font-style: normal;
+                font-weight: 500;
+                font-size: 16px;
+                line-height: 19px;
+                margin-bottom: 15%;
+            }
+        }
+    }
+
+    &__fale-conosco {
+        width: 50%;
+        margin-left: 5%;
+
+        @include for-phone-only {
+            margin: 0 auto;
+            width: 90%;
+        }
+
+        &__title {
+            color: $custom-black;
+            font-family: 'Raleway';
+            font-style: normal;
+            font-weight: 700;
+            font-size: 16px;
+            line-height: 19px;
+            margin-bottom: 8px;
+
+            @include for-tablet-only {
+                margin: 0 5% 0 0;
+                width: 90%;
+            }
+        }
+
+        &__form {
+            display: flex;
+            flex-direction: column;
+            position: relative;
+
+            @include for-tablet-only {
+                margin: 0 5% 0 0;
+                width: 90%;
+            }
+
+            &__name-label {
+                position: absolute;
+                z-index: 1;
+                top: 8px;
+                left: 12px;
+                font-family: 'Raleway';
+                font-style: normal;
+                font-weight: 400;
+                font-size: 12px;
+                line-height: 16px;
+                color: $custom-black;
+            }
+
+            &__name {
+                width: 100%;
+                height: 56px;
+                position: relative;
+                padding-left: 10px;
+            }
+
+            &__message-label {
+                position: absolute;
+                z-index: 1;
+                top: 82px;
+                left: 12px;
+                font-family: 'Raleway';
+                font-style: normal;
+                font-weight: 400;
+                font-size: 12px;
+                line-height: 16px;
+                color: $custom-black;
+            }
+
+            &__message {
+                padding-top: 30px;
+                padding-left: 10px;
+                width: 100%;
+                position: relative;
+                margin-top: 16px;
+            }
+
+            &__button {
+                width: 165px;
+                height: 51px;
+                font-family: 'Raleway';
+                font-style: normal;
+                font-weight: 400;
+                font-size: 16px;
+                line-height: 19px;
+                color: $white;
+                background-color: $blue-theme;
+                border: none;
+                margin-top: 8px;
+            }
+        }
+    }
+}

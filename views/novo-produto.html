@@ -1,0 +1,92 @@
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Novo Produto - Alura Geek</title>
+    <link rel="stylesheet" href="../src/assets/css/reset.css">
+    <link rel="stylesheet" href="../src/assets/css/novo-produto.css">
+</head>
+<body>
+    <header>
+        <nav class="nav">
+            <div class="nav__container">
+                <a href="../index.html" class="nav__container__logo">
+                    <img class="nav__container__logo__img" src="../src/assets/img/logo-img.png" alt="">
+                    <p class="nav__container__logo__text"><span class="nav__container__logo__text__blue">Alura</span>Geek</p>
+                </a>
+                <section class="nav__container__search-box" id="search-box">
+                    <input class="nav__container__search-box__input" id="input-search-bar" type="text" placeholder="O que deseja encontrar?">
+                    <button id="button-search" class="nav__container__search-box__button"><img class="nav__container__search-box__img" id="img-search" src="../src/assets/img/search-icon.png" alt="pesquisar"></button>
+                </section>
+                <button class="nav__container__login-button" id="login-button">
+                    <p id="login-button">Ir para home</p>
+                </button>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <section class="novo-produto">
+            <h1 class="novo-produto__title">Adicionar novo produto</h1>
+            <div class="novo-produto__add-image">
+                <div class="novo-produto__add-image__drag-box" id="drag-box">
+                    <img src="" alt="preview-image" class="novo-produto__add-image__drag-box__preview" id="preview">
+                    <img src="../src/assets/img/img-icon.png" class="novo-produto__add-image__drag-box__icon" id="img-icon">
+                    <p class="novo-produto__add-image__drag-box__text" id="drag-box-description">Arraste para adicionar uma imagem para o produto</p>
+                    <input type="file" id="image-input" class="novo-produto__add-image__drag-box__drag-area" value="arraste para adicionar uma imagem para o produto" accept="image/png, image/jpg" name="file">
+                </div>
+            </div>
+            <form class="novo-produto__form" action="">
+                <label class="novo-produto__form__label" for="nome">Nome</label>
+                <input class="novo-produto__form__field" type="text" id="nome" placeholder="Nome do produto">
+                <label class="novo-produto__form__label" for="preco">Preço</label>
+                <input class="novo-produto__form__field" type="text" id="preco" placeholder="Preço do produto">
+                <label class="novo-produto__form__label" for="description">Descrição do produto</label>
+                <label class="novo-produto__form__label" for="categoria">Selecione a categoria:</label>
+                <select class="novo-produto__form__field" name="category" id="categoria">
+                    <option class="novo-produto__form__field__option" value="value1">Star Wars</option>
+                    <option class="novo-produto__form__field__option" value="value2">Consoles</option>
+                    <option class="novo-produto__form__field__option" value="value3">Diversos</option>
+                </select>
+                <textarea class="novo-produto__form__description" name="descricao" id="descricao" placeholder="Descrição do produto" data-description id="description" cols="30" rows="10"></textarea>
+                <button class="novo-produto__form__button" type="submit" data-submit>Adicionar produto</button>
+            </form>
+        </section>
+        <section class="contact">
+            <div class="contact__container">
+                <div class="contact__info">
+                    <section class="contact__info__logo">
+                        <img src="../src/assets/img/logo-img.png" alt="">
+                        <p class="contact__info__logo__text"><span class="contact__info__logo__text__blue">Alura</span>Geek</p>
+                    </section>
+                    <section class="contact__info__topics">
+                        <a href="#" class="contact__info__topics__link">Quem somos nós</a>
+                        <a href="#" class="contact__info__topics__link">Política de privacidade</a>
+                        <a href="#" class="contact__info__topics__link">Programa de fidelidade</a>
+                        <a href="#" class="contact__info__topics__link">Nossas lojas</a>
+                        <a href="#" class="contact__info__topics__link">Quero ser franqueado</a>
+                        <a href="#" class="contact__info__topics__link">Anuncie aqui</a>
+                    </section>
+                </div>
+                <div class="contact__fale-conosco">
+                    <p class="contact__fale-conosco__title">Fale conosco</p>
+                    <form class="contact__fale-conosco__form" action="">
+                        <label class="contact__fale-conosco__form__name-label" for="name">Nome</label>
+                        <input class="contact__fale-conosco__form__name" type="text" id="name">
+                        <label class="contact__fale-conosco__form__message-label"for="message">Escreva sua mensagem</label>
+                        <textarea class="contact__fale-conosco__form__message" name="" id="message" cols="30" rows="5"></textarea>
+                        <input class="contact__fale-conosco__form__button" type="submit" value="Enviar mensagem">
+                    </form>
+                </div>
+            </div>
+        </section>
+
+    </main>
+    <footer class="footer">
+        <h4 class="footer__text">Desenvolvido por Cassiano Almeida<br>2021</h4>
+    </footer>
+    <script type="module" src="../js/controller/criaProduto.js"></script>
+    <script type="module" src="../js/controller/searchBarProdutos.js"></script>
+    <script src="../js/controller/direcionaHome.js"></script>
+</body>
+</html>

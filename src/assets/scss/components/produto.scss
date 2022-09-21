@@ -1,0 +1,260 @@
+main {
+    background-color: $light-gray-background;
+        padding-top: 70px;
+
+}
+
+.produto {
+    max-width: 1136px;
+    margin: 0 auto;
+    display: flex;
+
+    @include for-tablet-only {
+        margin: 5% 5%;
+    }
+
+    @include for-phone-only {
+        margin: 5% auto;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    &__container {
+        margin-left: 4%;
+        display: flex;
+
+        @include for-phone-only {
+            margin: 5% auto;
+            width: 100%;
+            justify-content: center;
+        }
+    }
+
+    &__img {
+        max-width: 254px;
+        min-width: 215px;
+        max-height: 251px;
+
+        @include for-tablet-only {
+            max-width: 254px;
+            min-width: 215px;
+        }
+
+        @include for-phone-only {
+            width: 80%;
+        }
+    }
+
+    &__content {
+        margin-left: 2%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+
+        @include for-phone-only {
+            margin: 0 4%;
+        }
+
+        &__title {
+            font-family: 'Raleway';
+            font-style: normal;
+            font-weight: 500;
+            font-size: 22px;
+            margin-bottom: 8px;
+            color: $custom-black;
+
+            @include for-desktop-only {
+                font-size: 52px;
+            }
+        }
+
+        &__price {
+            font-family: 'Raleway';
+            font-style: normal;
+            font-weight: 700;
+            font-size: 16px;
+            line-height: 19px;
+            margin-bottom: 8px;
+            color: $custom-black;
+        }
+
+        &__text {
+            width: 100%;
+            font-family: 'Raleway';
+            font-style: normal;
+            font-weight: 400;
+            font-size: 14px;
+            line-height: 19px;
+            color: $custom-black;
+
+            @include for-desktop-only {
+                font-size: 16px;
+            }
+        }
+    }
+}
+
+.products {
+    max-width: 1136px;
+    margin: 0 auto;
+
+    &__section {
+        @include for-tablet-only {
+            margin: 0 5%;
+        }
+    }
+
+    &__header {
+        margin-top: 52px;
+        display: flex;
+        justify-content: space-between;
+        height: 54px;
+
+        @include for-phone-only {
+            margin: 52px 5% 0 5%;
+        }
+
+        &__title {
+            font-family: 'Raleway';
+            font-style: normal;
+            font-weight: 700;
+            font-size: 32px;
+            line-height: 38px;
+            color: $custom-black;
+        }
+    }
+
+    &__list {
+        display: flex;
+        justify-content: space-between;
+
+        @include for-tablet-only {
+            justify-content: space-around;  
+        }
+
+        @include for-phone-only {
+            flex-wrap: wrap;
+            justify-content: space-around;
+        }
+
+        &__card {
+            display: none;
+
+            @include for-tablet-only {
+                margin: 0 1%;
+                
+                &:nth-child(1){
+                    display: block;
+                }
+                &:nth-child(2){
+                    display: block;
+                }
+                &:nth-child(3){
+                    display: block;
+                }
+                &:nth-child(4){
+                    display: block;
+                }
+            }
+
+            @include for-phone-only {
+                margin: 1%;
+
+                &:nth-child(1){
+                    display: block;
+                }
+                &:nth-child(2){
+                    display: block;
+                }
+                &:nth-child(3){
+                    display: block;
+                }
+                &:nth-child(4){
+                    display: block;
+                }
+            }
+
+            @include for-desktop-only {
+                &:nth-child(1){
+                    display: block;
+                }
+                &:nth-child(2){
+                    display: block;
+                }
+                &:nth-child(3){
+                    display: block;
+                }
+                &:nth-child(4){
+                    display: block;
+                }
+                &:nth-child(5){
+                    display: block;
+                }
+                &:nth-child(6){
+                    display: block;
+                }
+            }
+
+            &__img {
+                max-width: 176px;
+                min-width: 176px;
+                max-height: 174px;
+                min-height: 174px;
+            }
+
+            &__content {
+                height: 75px;
+                display: flex;
+                flex-direction: column;
+                justify-content: space-around;
+
+                &__text {
+                    font-family: 'Raleway';
+                    font-style: normal;
+                    font-weight: 500;
+                    font-size: 14px;
+                    line-height: 16px;
+                    color: $custom-black;
+                    margin-top: 5px;
+                }
+
+                &__price {
+                    font-family: 'Raleway';
+                    font-style: normal;
+                    font-weight: 700;
+                    font-size: 16px;
+                    line-height: 19px;
+                    color: $custom-black;
+                }
+
+                &__link {
+                    text-decoration: none;
+                    color: $blue-theme;
+                    font-family: 'Raleway';
+                    font-style: normal;
+                    font-weight: 700;
+                    font-size: 16px;
+                    line-height: 19px;
+
+                    &:hover {
+                        cursor: pointer;
+                    }
+                }
+                
+                &__id-hide{
+                    display: none;
+                }
+            }
+        }
+
+        &__hide {
+            @include for-tablet-only {
+                display: none;
+            }
+
+            @include for-phone-only {
+                display: none;
+            }
+        }
+    }    
+}

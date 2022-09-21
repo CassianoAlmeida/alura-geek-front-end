@@ -1,0 +1,122 @@
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alura Geek</title>
+    <link rel="stylesheet" href="./src/assets/css/reset.css">
+    <link rel="stylesheet" href="./src/assets/css/index.css">
+</head>
+<body>
+    <header>
+        <nav class="nav">
+            <div class="nav__container">
+                <a href="../index.html" class="nav__container__logo">
+                    <img class="nav__container__logo__img" src="./src/assets/img/logo-img.png" alt="">
+                    <p class="nav__container__logo__text"><span class="nav__container__logo__text__blue">Alura</span>Geek</p>
+                </a>
+                <section class="nav__container__search-box" id="search-box">
+                    <input class="nav__container__search-box__input" id="input-search-bar" type="text" placeholder="O que deseja encontrar?">
+                    <button id="button-search" class="nav__container__search-box__button"><img class="nav__container__search-box__img" id="img-search" src="../src/assets/img/search-icon.png" alt="pesquisar"></button>
+                </section>
+                <button class="nav__container__login-button" id="login-button">
+                    <p id="login-button">Login</p>
+                </button>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <section class="presentation">
+            <div class="presentation__img"></div>
+            <div class="presentation__content">
+                <h1 class="presentation__content__title">Dezembro Promocional</h1>
+                <p class="presentation__content__text">Produtos selecionados com 33% de desconto</p>
+                <div class="presentation__content__button"><a href="#consoles" id="ver-consoles" class="presentation__content__button__anchor">Ver Consoles</a></div>
+            </div>
+        </section>
+        <section class="products">
+            <section class="products__section" id="star-wars">
+                <div class="products__header">
+                    <h2 class="products__header__title">Star Wars</h2>
+                    <button class="products__header__link vertudo__star-wars" id="vertudo__star-wars" href="./views/produtos.html">Ver tudo →</button>
+                </div>
+                <ul class="products__list" id="product-list-star-wars">
+                </ul>
+            </section>
+            <section class="products__section" id="consoles">
+                <div class="products__header">
+                    <h2 class="products__header__title">Consoles</h2>
+                    <button class="products__header__link vertudo__consoles" id="vertudo__consoles" href="./views/produtos.html">Ver tudo →</button>
+                </div>
+                <ul class="products__list" id="product-list-consoles">
+                </ul>
+            </section>
+            <section class="products__section" id="diversos">
+                <div class="products__header">
+                    <h2 class="products__header__title">Diversos</h2>
+                    <button class="products__header__link vertudo__diversos" id="vertudo__diversos" href="./views/produtos.html">Ver tudo →</button>
+                </div>
+                <ul class="products__list" id="product-list-diversos">
+                </ul>
+            </section>
+        </section>
+        <section class="contact">
+            <div class="contact__container">
+                <div class="contact__info">
+                    <section class="contact__info__logo">
+                        <img src="./src/assets/img/logo-img.png" alt="">
+                        <p class="contact__info__logo__text"><span class="contact__info__logo__text__blue">Alura</span>Geek</p>
+                    </section>
+                    <section class="contact__info__topics">
+                        <a href="#" class="contact__info__topics__link">Quem somos nós</a>
+                        <a href="#" class="contact__info__topics__link">Política de privacidade</a>
+                        <a href="#" class="contact__info__topics__link">Programa de fidelidade</a>
+                        <a href="#" class="contact__info__topics__link">Nossas lojas</a>
+                        <a href="#" class="contact__info__topics__link">Quero ser franqueado</a>
+                        <a href="#" class="contact__info__topics__link">Anuncie aqui</a>
+                    </section>
+                </div>
+                <div class="contact__fale-conosco">
+                    <p class="contact__fale-conosco__title">Fale conosco</p>
+                    <form class="contact__fale-conosco__form" action="">
+                        <label class="contact__fale-conosco__form__name-label" for="name">Nome</label>
+                        <input class="contact__fale-conosco__form__name" type="text" id="name">
+                        <label class="contact__fale-conosco__form__message-label"for="message">Escreva sua mensagem</label>
+                        <textarea class="contact__fale-conosco__form__message" name="" id="message" cols="30" rows="5"></textarea>
+                    </form>
+                    <button class="contact__fale-conosco__form__button" type="reset">Enviar mensagem</button>
+                </div>
+            </div>
+        </section>
+
+    </main>
+    <footer class="footer">
+        <h4 class="footer__text">Desenvolvido por Cassiano Almeida<br>2021</h4>
+    </footer>
+
+    <!-- Modal -->
+    <div id="modal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <section class="login">
+                <h1 class="login__title">Iniciar Sessão</h1>
+                <form class="login__form" action="">
+                    <label for="email"></label>
+                    <input class="login__form__field" type="text" id="email" placeholder="Escreva seu email">
+                    <label for="senha"></label>
+                    <input class="login__form__field" type="text" id="senha" placeholder="Escreva sua senha">
+                    <button class="login__form__button" type="reset" id="entrar">Entrar</button>
+                </form>
+            </section>
+        </div>
+    </div>
+
+    <script type="module" src="./js/view/indexView.js"></script>
+    <script type="module" src="./js/controller/pegaIdProduto.js"></script>
+    <script src="./js/view/modal-login.js"></script>
+    <script src="./js/controller/fakelogin.js"></script>
+    <script type="module" src="./js/controller/pegaIdProduto.js"></script>
+    <script type="module" src="./js/view/verTudo.js"></script>
+    <script type="module" src="../js/controller/searchBarProdutosIndex.js"></script>
+</body>
+</html>
